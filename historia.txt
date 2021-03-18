@@ -1,0 +1,5 @@
+index de prueba
+git init //iniciar el repositorio
+git status //estdo del archivo
+git rm o git rm --cached //eliminar
+git comit //guardar el archivo en el repositorio -m "mensaje de cambios" //añadir un mensaje al comit para el futuro
