@@ -24,3 +24,4 @@ $ git rm --cached archivo.extencion//se usa para devolver el archivo que se tien
 $ git config --list //muestra la lista de configuracion de git
 $ git config --list --show-origin//rutas de acceso a la configuración de git
 $ git log archivo.extencion //muestra la historia del archivo
+$ git diff codigo(numeros en amarillo) codigo(numeros en amarillo)//muestra en una comparacion los ambios que se han echo a lo largo del archivo
