@@ -1,10 +1,10 @@
 index de prueba
 git init //iniciar el repositorio
+$ git add nombre_de_archivo.extencion //Agregar el archivo al repositorio
 git status //estdo del archivo
 git rm o git rm --cached //eliminar
 git comit //guardar el archivo en el repositorio -m "mensaje de cambios" //añadir un mensaje al comit para el futuro
 
-$ git add nombre_de_archivo.extencion //Agregar el archivo al repositorio
 $ git commit -m “Mensaje”// Agregamos los cambios para el repositorio
 $ git add .// Agregar los cambios de la carpeta en la que nos encontramos agregar todo
 $ git status // visualizar cambios
@@ -25,3 +25,15 @@ $ git config --list //muestra la lista de configuracion de git
 $ git config --list --show-origin//rutas de acceso a la configuración de git
 $ git log archivo.extencion //muestra la historia del archivo
 $ git diff codigo(numeros en amarillo) codigo(numeros en amarillo)//muestra en una comparacion los ambios que se han echo a lo largo del archivo
+$ git reset codigo(numeros en amarillo) --hard //borramos tdo y volvemos a la ulitma version
+$ git reset codigo(numeros en amarillo) --soft //volvemos a la version anterior pero sigue el staging
+$ git checkout #commit archivo.txt //volvemos a ver el archivo a la version del commit indicado, sin cambiar el staging
+$ git checkout master #commit archivo.txt //volvemos a nuestro archivo actual
+$ git commit -am "comentario" //es un (git add .) (y git commit -m "") unido en uno solo, solo sirve para archivos que antes fueron añadidos al staging con (git add.)
+
+$ git branch "nombre de la rama" //crea una nueva rama del lugar de origen en este caso master
+$ git checkout "nombre de la rama" //me muevo entre las ramas del repositorio 
+$ git branch //muestra las ramas del master
+$ git merge "nombre_de_la_rama" -m "comentario" //unimos la rama invocada a la que estemos actualmente.
+
+-------------------------------------------------cambio de "master" a "main" todo lo que diga master se refiere a main---------------------------------------
