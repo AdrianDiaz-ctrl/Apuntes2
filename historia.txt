@@ -37,3 +37,7 @@ $ git branch //muestra las ramas del master
 $ git merge "nombre_de_la_rama" -m "comentario" //unimos la rama invocada a la que estemos actualmente.
 
 -------------------------------------------------cambio de "master" a "main" todo lo que diga master se refiere a main---------------------------------------
+
+$ git remote add origin https://direccion //asi es como mandamos nuestro documento a git hub la url la conseguimos en el repositoria creado en la parde de dowloand
+$ git remote -v //vemos la direccion a la que esta originada nuetro documento
+
