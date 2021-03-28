@@ -4,6 +4,7 @@ $ git add nombre_de_archivo.extencion //Agregar el archivo al repositorio
 git status //estdo del archivo
 git rm o git rm --cached //eliminar
 git comit //guardar el archivo en el repositorio -m "mensaje de cambios" //añadir un mensaje al comit para el futuro
+------------------/*manejar el repo*/--------
 
 $ git commit -m “Mensaje”// Agregamos los cambios para el repositorio
 $ git add .// Agregar los cambios de la carpeta en la que nos encontramos agregar todo
@@ -31,6 +32,7 @@ $ git checkout #commit archivo.txt //volvemos a ver el archivo a la version del 
 $ git checkout master #commit archivo.txt //volvemos a nuestro archivo actual
 $ git commit -am "comentario" //es un (git add .) (y git commit -m "") unido en uno solo, solo sirve para archivos que antes fueron añadidos al staging con (git add.)
 
+----------------/*RAMAS*/----------------------
 $ git branch "nombre de la rama" //crea una nueva rama del lugar de origen en este caso master
 $ git checkout "nombre de la rama" //me muevo entre las ramas del repositorio 
 $ git branch //muestra las ramas del master
@@ -51,8 +53,24 @@ $ ssh-keygen -t rsa -b 4096 -C "correo que este conectado a git hub" //creamos l
 $ eval $(ssh-agent -s) //comprovamos que este funciondo bien i debe salir un mensaje "agent pid (numeros)"
 $ ssh-add ~/.ssh/id_rsa //agregamos muestra llave al repositorio de git
 $ git remote set-url origin git@github.com:direccion* //aqui cambiamos nuestra direccion de comunicacion con git hub y lo mandamos por el protocolo ssh
+$ git log --all --graph --decorate --oneline //aqui podemos ver la hsitoria de nuestro repositorio
+   //podemos crear alias en el bash de git ponemos: alias nombre_del_alias = "git log --all --graph --decorate --oneline"
+$ git tag -a v0.1//esto cambia segun el numero de tag puede ser v de version osea v0.1 o v1.0... -m "primer tag" #numeros de la referenacia //ponemos un tag a 
+$ git tag //muestra los tags
+$ git show-ref --tags //muestra la referencia con el tag correspondiente
 
+	/*primero hacer: "$git pull origin master"  para traernos todo del internet por si hubo algun cambio
+		*/"$git push origin --tags" //enviamos los tags
+	
 
+ 	      /*la rama master o main no deberia estar disponible por que si, debemos bloquearlo (caso de la vide real)
+	      /*un pull request P.R es un estado intermedio antes del Merch, con estootras personas pueden ver el codigo y aprovar el merch. (P.R es una caracteristica de git hyb)
 
+-----------------------------/* Comandos por si trabajo en una repositorio publico al cual no tengo acseso*/----------------
+$git clone url:https://... //sirve para clonar el repositorio que previamente duplique con FORK en github, en mi carpeta 
+ vi nombre_del_archivo //abrimos el archivo con el edittor de texto de consola esc + shift + z + z para salir 
+$ git remote add upstream  <url> //crea otra fuente nueve parea trar datos de master 
+$ git remote -v //vemos las opciones donde ponemos mandar o sacar informacion
+   $ git pull "upstream" master //ahora como tenemos mas de dos referencias apra cominicarnos, debemos poner a cual direccion queremos enviar despues de "git pull" o "git push"
 
 
