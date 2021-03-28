@@ -37,7 +37,22 @@ $ git branch //muestra las ramas del master
 $ git merge "nombre_de_la_rama" -m "comentario" //unimos la rama invocada a la que estemos actualmente.
 
 -------------------------------------------------cambio de "master" a "main" todo lo que diga master se refiere a main---------------------------------------
+$ git branch -m <nombre-actual> <nombre-nuevo> //asi podemos cambiar el nombre de alguna rama de nuestro archivo git 
 
 $ git remote add origin https://direccion //asi es como mandamos nuestro documento a git hub la url la conseguimos en el repositoria creado en la parde de dowloand
+$ git remote set-url origin https://direccion // de esta forma podemos cambiar el origen si por alguna razon cambio o es otro  
 $ git remote -v //vemos la direccion a la que esta originada nuetro documento
+$ git push origin master // enviamos al repositorio nuestro archivo
+$ git pull origin master //traenos todo lo del repositorio de git hub a nuestro git
+$ git pull origin master --allow-unrelated-histories //es en casos aislados donde al ejecutar hit push no pueda por que hay cambios en el repositorio de git hub, esto hace que se fucionen sin importar los archivos
+
+------------------------------------------llaves privadas y publicas---------------------------
+$ ssh-keygen -t rsa -b 4096 -C "correo que este conectado a git hub" //creamos las llaves (investigar como poner passphrase contraseña con espacios) todo debe estar hubicado en la carpeta del HOME osea en ~ = Home
+$ eval $(ssh-agent -s) //comprovamos que este funciondo bien i debe salir un mensaje "agent pid (numeros)"
+$ ssh-add ~/.ssh/id_rsa //agregamos muestra llave al repositorio de git
+$ git remote set-url origin git@github.com:direccion* //aqui cambiamos nuestra direccion de comunicacion con git hub y lo mandamos por el protocolo ssh
+
+
+
+
 
