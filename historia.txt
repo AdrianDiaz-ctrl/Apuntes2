@@ -60,6 +60,7 @@ $ git tag //muestra los tags
 $ git show-ref --tags //muestra la referencia con el tag correspondiente
 
 	/*primero hacer: "$git pull origin master"  para traernos todo del internet por si hubo algun cambio
+<<<<<<< HEAD
 		*/"$git push origin --tags" //enviamos los tags
 	
 
@@ -74,3 +75,10 @@ $ git remote -v //vemos las opciones donde ponemos mandar o sacar informacion
    $ git pull "upstream" master //ahora como tenemos mas de dos referencias apra cominicarnos, debemos poner a cual direccion queremos enviar despues de "git pull" o "git push"
 
 
+=======
+		"$git push origin --tags" //enviamos los tags
+	*/
+
+-------------/* la rama master o main no deberia estar disponible por que si, debemos bloquearlo (caso de la vide real)
+-------------/*un pull request P.R es un estado intermedio antes del Merch, con estootras personas pueden ver el codigo y aprovar el merch. (P.R es una caracteristica de git hyb)
+>>>>>>> 43682f61655476429aed4a427982e1560d765a70
